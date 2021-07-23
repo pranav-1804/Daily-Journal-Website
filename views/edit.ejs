@@ -1,0 +1,24 @@
+<%- include("partials/header"); -%>
+<%-include('nav'); -%>
+
+<div class="container">
+    <h1>Edit Blog</h1>
+
+    <form action="/myblogs/<%=blog._id%>?_method=PUT" method="POST"  enctype="multipart/form-data" >
+      <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" type="text" name="postTitle" value="<%=blog.title%>">
+        <label>Post</label>
+        <textarea  class="form-control" id='contentInfo'name="postBody" rows="5" cols="30"> <%=blog.content %></textarea><br>
+        <input type="file" name='blogimage' multiple ><br><br>
+
+        <div>
+      </div>
+      <br>
+        
+      <button class="btn btn-primary " type="submit" name="button">Update Blog</button>
+    </div>
+    </form>
+</div>
+
+<%- include("partials/footer"); -%>

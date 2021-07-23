@@ -1,0 +1,33 @@
+<%- include("partials/header"); -%>
+<div id='main'>
+  <%-include('nav'); -%>
+<div class="bottom-left"><h3>Make stuff, look at stuff, talk about stuff.</h3>
+  <h3>Create a unique and beautiful blog.Its easy and free.</h3>
+  <a href='/regLog'><button type="button" class="btn btn-success">Create a Blog</button></a>
+</div>
+</div>
+
+<br>
+
+<div class="container">
+<h2 class='entry'>Published Blogs</h2><br>
+<hr>
+  <div class='row'>
+    <%  posts.forEach(function(post){ %>
+    <div class='col-lg-4 col-sm-6'>
+      <div class="card border border-success blog-card" style="width: 16Srem;">
+          <img class="card-img-top" src="<%= post.images[0].url %>" alt="Card image cap">
+        <div class="card-body">
+        <h4 class="card-title"><%=post.title%></h4>
+        <p><%=post.content.substring(0,100)+ " ..."%></p>
+        <p class='date'><%=post.publishedAt %> </p>
+        <a href="/posts/<%=post._id%>" class='btn btn-primary' role="button">Read More</a>
+    </div>
+    </div>
+    </div>
+    <% }) %>
+  </div>
+  <hr>
+</div>
+  
+<%-include('partials/footer') -%>

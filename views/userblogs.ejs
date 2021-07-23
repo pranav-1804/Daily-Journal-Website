@@ -1,0 +1,26 @@
+<%- include('partials/header'); %>
+<%- include('nav'); -%>
+<div class="container">
+
+
+<div class='row'>
+    <%  myblogs.forEach(function(blog){ %>
+    <div class='col-lg-4 col-sm-4'>
+      <div class="card border border-success blog-card" style="width: 16rem;">
+          <img class="card-img-top" src="<%= blog.images[0].url %>" alt="Card image cap">
+        <div class="card-body">
+        <h4 class="card-title"><%=blog.title%></h4>
+        <p><%=blog.content.substring(0,100)+ " ..."%></p>
+        <p class='date'><%=blog.publishedAt %> </p>
+        <a href="/myblogs/<%=blog._id%>" class='btn btn-primary' role="button">View</a>
+        <a href="/myblogs/<%=blog._id%>/edit" class='btn btn-warning' role="button">Edit</a>
+        <a href="/myblogs/<%=blog._id%>/delete" class='btn btn-danger' role="button">Delete</a>
+    </div>
+    </div>
+    </div>
+    <% }) %>
+  </div>
+  </div>
+</div>
+
+<%- include('partials/footer'); %>

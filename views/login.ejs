@@ -1,0 +1,46 @@
+<%- include('partials/header'); -%>
+
+<%-include('nav');-%>
+
+<div class="row">
+<div class="container">
+
+  <h1>Login</h1><br>
+
+  <img class='loginImage' src='images/login.jpg'>
+
+  <h4 style="color: red;"><%= message %></h4>
+
+  <div class="row">
+    <div class="col-sm-8">
+
+          <form action="/login" method="POST">
+            <div class="form-group">
+              <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+              <label for="email">Email</label>
+              <input type='email' class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password">
+            </div><br>
+            <button type="submit" class="btn btn-primary btn-lg">Login</button>
+            <br>
+            <br>
+            <p>Not a user? <a style="text-decoration: underline;" class="btn btn-success" href="/register">Sign up</a></p>
+          </form>
+
+          <div class="col-sm-4">
+            <a class="btn btn-social btn-google" href="/auth/google" role="button">
+              <i class="fab fa-google"></i>
+              Sign In with Google
+            </a>    
+          </div> 
+    </div>
+
+  </div>
+</div>
+<div class="row"></div>
+    
+<%- include('partials/footer'); -%>

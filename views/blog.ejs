@@ -1,0 +1,34 @@
+<%- include("partials/header"); -%>
+<%-include('nav'); -%>
+
+<div class="container">
+  <div class='row'>
+  <div class='col-lg-4 col-sm-12 '>
+
+  <% for(let img of images){ %>
+  <div class="card postImage" style="width: 20rem;">
+    <img class="card-img" src="<%=img.url%>" alt="">
+  </div>
+    <% }%>
+  </div>
+
+  <div class='col-lg-8 col-sm-12'>
+      <h1 class='blogtitle'><%=title%></h1>
+      <h6>Published at: <%= publishedAt %></h6>
+      <hr>
+      <h4 class="blogpost"><%=content%></h4>
+      <hr>
+
+      <form action="/edit" method="POST">
+        <button type="submit" name='updatedPost' value=<%=id%> class="btn btn-warning">Edit</button>
+      </form>
+
+      <form action="/delete" method="POST">
+        <button type="submit" name='deletedPost' value=<%= id %> class="btn btn-danger deletepost">Delete</button>
+      </form>
+      <br>
+    </div>
+  </div>
+  </div>
+  
+<%- include("partials/footer"); -%>
