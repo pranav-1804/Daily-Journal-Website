@@ -7,7 +7,7 @@
   padding-bottom: 70px;
 }
 #main{
-  width: 105%;
+  width: 110%;
   height: 100vh;
   background-image: url('../images/background.jpg');
   background-size: cover;
@@ -19,7 +19,9 @@ nav{
   height: 80px;
   opacity: 0.9;
 }
-
+.about{
+  margin-left: 20px;
+}
 .navbar-nav  li a:hover {
   color: black !important;
 }
