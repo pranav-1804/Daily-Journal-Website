@@ -7,7 +7,7 @@
   padding-bottom: 70px;
 }
 #main{
-  width: 100%;
+  width: 105%;
   height: 100vh;
   background-image: url('../images/background.jpg');
   background-size: cover;
@@ -20,12 +20,6 @@ nav{
   opacity: 0.9;
 }
 
-.adjust{
-  margin-left: 40px;
-}
-
-
-
 .navbar-nav  li a:hover {
   color: black !important;
 }
@@ -35,12 +29,6 @@ nav{
 .footer-padding {
 	padding-bottom: 60px;
 }
-
-.about{
-  font-family: 'STIX Two Math', serif;
-}
-
-
 
 .footer {
 	position: fixed;
