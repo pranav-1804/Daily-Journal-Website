@@ -20,6 +20,12 @@ nav{
   opacity: 0.9;
 }
 
+.adjust{
+  margin-left: 40px;
+}
+
+
+
 .navbar-nav  li a:hover {
   color: black !important;
 }
@@ -29,6 +35,12 @@ nav{
 .footer-padding {
 	padding-bottom: 60px;
 }
+
+.about{
+  font-family: 'STIX Two Math', serif;
+}
+
+
 
 .footer {
 	position: fixed;
