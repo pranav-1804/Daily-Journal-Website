@@ -40,7 +40,7 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-mongoose.connect("mongodb+srv://pranav_18:<password>@cluster0.j2fvnxx.mongodb.net/?retryWrites=true&w=majority/BlogWebsiteDB", {useNewUrlParser: true,useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://pranav_18:Pranav@2918@cluster0.j2fvnxx.mongodb.net/?retryWrites=true&w=majority/BlogWebsiteDB", {useNewUrlParser: true,useUnifiedTopology: true});
 mongoose.set('useCreateIndex', true)
 mongoose.set('useFindAndModify', false)
 
